@@ -1,0 +1,417 @@
+@import url("./reset.css");
+
+/* почитал про БЭМ,суть уловил,но,по ощущениям,тогда надо это делать с самого начала,либо это превращается в целую новую работу,по переписыванию большей части классов */
+
+.open_page {
+  height: 768px;
+  background-image: url("../img/bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 41px 0 81px 0;
+}
+
+.container {
+  max-width: 941px;
+  margin: 0 auto;
+}
+
+.open_info {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin-top: 305px;
+  color: #fff;
+  text-align: center;
+  font-family: "Bebas Neue";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 5.709px;
+}
+
+.open_text {
+  color: #fff;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.open_btn {
+  margin-top: 221px;
+  color: #fff;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.7px;
+}
+
+header {
+  height: 65px;
+  padding-top: 24px;
+}
+
+.logo {
+  width: 80px;
+  height: 18px;
+}
+
+.menu_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 47px;
+  color: #48555b;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.091px;
+  cursor: pointer;
+}
+
+.header_container {
+  max-width: 941px;
+  /* Пробовал задать отступы меджу лого и навигацией так,чтобы как на макете,единственный вариант, */
+  /* который не рушит все на адаптиве это задать макс ширину как у секций ниже */
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__item:hover {
+  color: #00a4e5;
+}
+
+.about {
+  padding-top: 48px;
+}
+
+/* Отделил выравнивание по центру от title_section,чтобы переиспользовать ниже,но там выравнивание не по центру */
+.title_story {
+  text-align: center;
+}
+
+.about_information {
+  margin-top: 92px;
+  display: flex;
+  justify-content: center;
+  gap: 77px;
+}
+
+.about_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 405px;
+ 
+
+  /* width: 50%; */
+}
+
+.about_link:hover {
+  color: #16ace8;
+}
+
+.strong_text {
+  color: #48555b;
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.188px;
+}
+
+.text {
+  color: #48555b;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px; /* 176.923% */
+  letter-spacing: 0.188px;
+}
+
+.about_cards {
+  /* width: 50%; */
+  display: flex;
+  gap: 20px;
+}
+
+.cards {
+  width: 140px;
+  height: 225px;
+  color: #fff;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 29px; /* 120.833% */
+  letter-spacing: 0.188px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.card_plan {
+  background-image: url(../img/plan.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card_manage {
+  background-image: url(../img/manage.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card_build {
+  background-image: url(../img/build.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.title_sections {
+  color: #48555b;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.306px;
+}
+
+.title_sections::after {
+  content: "";
+  display: block;
+
+  height: 2px;
+  width: 75px;
+  background-color: #00a4e5;
+  margin: 5px auto 0;
+}
+
+.capabilities {
+  padding-top: 128px;
+}
+
+.capabilities_header {
+  display: flex;
+  justify-content: space-between;
+  
+  height: 38px;
+}
+
+/* тут пробовал как работает обращение по child,тут это не к месту,но в целом уловил вроде бы */
+/* .capabilities_header:first-child{
+  text-align: left;
+} */
+
+.capabilities_info {
+  display: flex;
+  gap: 31.6px;
+}
+
+.capabilities_btn {
+  width: 150px;
+  background: #00a4e5;
+  color: #fff;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.capabilities_text {
+  color: #48555b;
+  font-family: "Open Sans";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px; /* 172.727% */
+  letter-spacing: 0.2px;
+}
+
+.capabilities_cards {
+  margin-top: 78px;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.capabilities_card {
+ padding: 38px 23px;
+  width: 295px;
+  /* height: 446px; */
+}
+
+.card_title {
+  margin-top: 25px;
+  color: #48555b;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.427px;
+}
+
+.get-in-touch {
+  /* padding-top: 115px; */
+  background-image: url(../img/buildings.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  /* попробовал 100vh,интересно,но тут не подходит,а изначально просто ставил высоту,что,наверное,не то */
+}
+
+.get-in-touch_content {
+  /* тут попробовал padding с тремя показателями,вроде работает */
+  padding: 115px 0 231px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  /* background-image: url(../img/buildings.webp); это эксперименты куда ставить картину на фон
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; */
+}
+
+.get-in-touch_text {
+  color: #48555b;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 120% */
+  letter-spacing: 0.15px;
+}
+
+.get-in-touch_btn {
+  background: #00a4e5;
+  color: #fff;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.newsletter {
+  background-color: black;
+  height: 100%;
+}
+
+.newsletter_content {
+  padding: 35px 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+.newsletter_text {
+  color: #fff;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.846px;
+}
+
+.input {
+  padding: 11px 0 10px 16px;
+  height: 100%;
+  width: 250px;
+  border: 1px solid #979797;
+  background: #fff;
+  color: #48555b;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.07px;
+  outline: none;
+}
+
+.form_wrapper {
+  display: flex;
+}
+
+.newsletter_button {
+  background: #00a4e5;
+  width: 150px;
+  color: #fff;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.newsletter_container {
+  /* с этой поправкой,что здесь,что где то выше начинает нормально выстраиваться,но я это пишу как то интуитивно,не особо понимаю почему без этого не работает выравнивание */
+  max-width: 941px;
+}
+
+.footer {
+  padding: 22px 0;
+  /* высоту можно ли как то не в пикселях?*/
+  height: 60px;
+  background-color: black;
+  /* Здесь я подумал,что по идее можно же сюда положить стили текста,но вышло через жопу,хотя это было до добавления черного на фон,может оно и работало */
+  /* color: #fff;
+  font-family: "Open Sans";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.846px; */
+}
+
+
+.footer_text {
+  /* не уверен,что этот класс и вообще div нужен,но вроде работает:) */
+  text-align: center;
+  color: #fff;
+  font-family: "Open Sans";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.846px;
+}
